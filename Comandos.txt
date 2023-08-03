@@ -1,0 +1,3 @@
+criar = dotnet new mvc --no-https --output PartyInvites
+
+abrir no navegador = dotnet watch run
