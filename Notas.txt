@@ -1,0 +1,14 @@
+ - Crud = Create Read Update Delete // Termo Persistir 
+
+
+	View - UI - GUI 
+ - Interface de usuario , guide user interface.
+
+Interface somente é referida como contrato da classe, 
+transforma em algo que se adapte em outras faces.
+(uma tomada e um cabo com a ponta diferente que não se encaixa, 
+nesse caso ele se tornaria um adaptador para que possa ser encaixado o cabo na tomada)
+
+Injeção de dependencia...
+
+ - LIQ = Language Integrated Query.
