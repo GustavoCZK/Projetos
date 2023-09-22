@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PSIUWeb.Data.Interfaces;
+using PSIUWeb.Models;
 
 namespace PSIUWeb.Controllers
 {
@@ -15,6 +16,19 @@ namespace PSIUWeb.Controllers
         public IActionResult Index()
         {
             return View(pacientRepositor.GetPacients());
+        }
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id <= 0 || id == null)
+                return NotFound();
+
+            Pacient p = pacientRepositor.GetPacientById(id.Value);
+
+            if (p == null)
+                return NotFound();
+
+            return View(p);
         }
     }
 }
