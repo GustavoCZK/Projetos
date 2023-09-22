@@ -30,5 +30,23 @@ namespace PSIUWeb.Controllers
 
             return View(p);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Pacient pacient)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    pacientRepositor.Update(pacient);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    throw;
+                }
+                return View("Index");
+            }
+        }
     }
 }
