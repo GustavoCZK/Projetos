@@ -45,8 +45,9 @@ namespace PSIUWeb.Controllers
                 {
                     throw;
                 }
-                return View("Index");
+          
             }
+            return View("Index");
         }
     }
 }
