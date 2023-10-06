@@ -89,3 +89,5 @@ Caso não tiver o dotnet Use ESTE COMANDO no powershell do Desenvolvedor.
 - dotnet ef migrations add initial // Initial é o nome dado ao migrations, no caso a migração inicial
 
 - dotnet ef database update // para atualizar o banco de dados.
+
+- dotnet ef database remove // remove a migrations do banco de dados.
