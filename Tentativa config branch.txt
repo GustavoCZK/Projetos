@@ -1,0 +1,14 @@
+Comandos para configurar uma branch para fazer um merge no git,
+- git remote -v - para ver as branchs remotas
+
+Para tirar uma cópia de uma branch -
+- git checkout -b "nome da branch"
+
+- git checkout -b "feature/nome da brench" - para abrir um novo campo no git 
+
+Para ver as branchs -
+- git branch
+
+Para trocar de branch -
+- git checkout "nome da branch"
+
