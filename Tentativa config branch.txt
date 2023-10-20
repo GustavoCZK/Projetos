@@ -12,3 +12,4 @@ Para ver as branchs -
 Para trocar de branch -
 - git checkout "nome da branch"
 
+-git push origin feature/nome da brench
