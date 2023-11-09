@@ -30,7 +30,7 @@ namespace PSIUWeb.Data.Ef
 
         public Content Delete(int id)
         {
-            Content? c = GetContentById(id);
+            Content? c = GetContentById(id); 
             if (c == null)
                 return null;
             context.Contents?.Remove(c);

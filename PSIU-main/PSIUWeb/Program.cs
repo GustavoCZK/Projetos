@@ -21,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IPacientRepositor, EfPacientRepositor>();
 builder.Services.AddScoped<ICategoryRepository, EfCategoryRepository>();
 builder.Services.AddScoped<IContentRepository, EfContentRepository>();
+builder.Services.AddScoped<IMidiaRepository, EfMidiaRepository>();
+builder.Services.AddScoped<IPsicoRepository, EfPsicoRepository>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>( 
     options =>

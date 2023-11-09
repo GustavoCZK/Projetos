@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Psico>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            Listagens de Psicólogos
+                        </h3>
+                    </div>
+                    <div class="card-body">
+
+                        <a asp-controller="Psico" asp-action="Insert" >
+                            Incluir Novo
+                        </a>
+
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Id)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                                    <th>@Html.DisplayNameFor(model => model.CRP)</th>
+                                    <th>@Html.DisplayNameFor(model => model.IsAvailble)</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var ps in Model)
+                                {
+                                    <tr>
+                                        <td>@ps.Id</td>
+                                        <td>@ps.Name</td>
+                                        <td>@ps.CRP</td>
+                                        <td>@ps.IsAvailble</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <a asp-controller="Psico" 
+                                                       asp-action="Edit"
+                                                       asp-route-id="@ps.Id">
+                                                       Editar
+                                                   </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a asp-controller="Psico" 
+                                                       asp-action="Delete"
+                                                       asp-route-id="@ps.Id">
+                                                       Excluir
+                                                   </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
